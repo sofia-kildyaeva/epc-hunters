@@ -1,0 +1,400 @@
+@font-face {
+	font-family: 'Actay Wide';
+    font-display: swap;
+	src: url('../font/ActayWide-Bold.woff2') format('woff2'),
+         url('../font/ActayWide-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Actay';
+    font-display: swap;
+	src: url('../font/Actay-Regular.otf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Actay';
+    font-size: 14px;
+    color: white;
+}
+
+a, li {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+input, button {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.title {
+    font-family: 'Actay Wide';
+    color: white;
+}
+
+.element-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(70, 70, 70, 0.2173), rgba(255, 255, 255, 0)),
+        url('../img/main-background.png');
+    background-size: no-repeat;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 113px;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-logo {
+    font-size: 32px;
+    line-height: 30px;
+    margin-right: 52px;
+}
+
+.navigation-links-search {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navigation-menu {
+    display: none;
+}
+
+.link {
+    font-size: 20px;
+    line-height: 9.2px;
+    margin-right: 2.5rem;
+}
+
+.navigation-search {
+    border-bottom: 1px solid white;
+}
+
+.navigation-search input {
+    width: 137px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.navigation-search input::placeholder {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.navigation-search svg {
+    fill: white;
+}
+
+.main-title {
+    font-size: 90px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 48px;
+}
+
+.step {
+    width: 296px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(15px);
+    border: 3px solid white;
+    color: rgba(246, 255, 210, 1);
+    padding: 13px;
+    margin-bottom: 20px;
+}
+
+.step::before {
+    content: url(../img/step-decor.svg);
+    position: absolute;
+    top: -23px;
+    left: 276px;
+}
+
+.step-number {
+    background-color: rgba(94, 118, 0, 1);
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.step-number p {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
+}
+
+.step-description {
+    text-align: justify;
+}
+
+.step-one {
+    position: relative;
+}
+
+.step-one::after {
+    content: url(../img/line-1-2.svg);
+    position: absolute;
+    top: 77px;
+}
+
+.step-two {
+    position: absolute;
+    top: 543px;
+    left: 147px;
+}
+
+.step-two::after {
+    content: url(../img/line-2-3.svg);
+    position: absolute;
+    top: 78px;
+    left: 180px;
+}
+
+.step-three {
+    position: absolute;
+    top: 647px;
+    left: 497px;
+}
+
+.step-three::after {
+    content: url(../img/line-3-4.svg);
+    position: absolute;
+    top: -180px;
+    left: 40px;
+}
+
+.step-four {
+    position: absolute;
+    top: 400px;
+    left: 425px;
+}
+
+.step-four::after {
+    content: url(../img/line-4-5.svg);
+    position: absolute;
+    top: -64px;
+    left: 225px;
+}
+
+.step-five {
+    position: absolute;
+    top: 328px;
+    right: 70px;
+}
+
+.step-five::after {
+    content: url(../img/line-5-6.svg);
+    position: absolute;
+    top: 60px;
+    left: 55px;
+}
+
+.step-six {
+    position: absolute;
+    top: 485px;
+    right: 209px;
+}
+
+.slaider-button {
+    display: none;
+}
+
+
+@media(max-width: 500px) {
+    .hidden-active {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.56);
+        opacity: 0.1px;
+        z-index: 100;
+    }
+
+    .background {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(70, 70, 70, 0.2173), rgba(255, 255, 255, 0)),
+            url('../img/main-background-mobil.png');
+        padding-top: 30px;
+        padding-bottom: 138px;
+    }
+
+    .container {
+        width: 290px;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .navigation-logo {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .navigation-menu {
+        display: inline-block;
+    }
+
+    .button-menu-close {
+        display: none;
+    }
+
+    .button-menu-close p {
+        margin-right: 15px;
+    }
+
+    .button-menu-close-active {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        z-index: 1000000;
+        color: black;
+        top: 35px;
+        left: 200px;
+    }
+
+    .navigation-links-search {
+        display: none; 
+        position: absolute;
+    }
+
+    .links-search-active {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        left: 0px;
+        background-color: white;
+        opacity: 0.95;
+        z-index: 10000;
+        padding-top: 170px;
+    }
+
+    .navigation-links {
+        flex-direction: column;
+        margin-top: 80px;
+        margin-bottom: 15px;
+    }
+
+    .navigation-links li {
+        margin-bottom: 15px;
+    }
+    
+    .link {
+        font-size: 14px;
+        line-height: 17.39px;
+        margin-right: 0px;
+        color: black;
+    }
+
+    .navigation-search {
+        border-bottom: 1px solid black;
+        margin-bottom: 30px;
+    }
+    
+    .navigation-search input {
+        width: 96px;
+        height: 16px;
+        margin-right: 50px;
+    }
+    
+    .navigation-search input::placeholder {
+        font-size: 14px;
+        color: black;
+    }
+
+    .navigation-search svg {
+        fill: black;
+    }
+    
+    .main-title {
+        font-size: 35px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .main-steps {
+        position: relative;
+    }
+    
+    .step {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 217px;
+        backdrop-filter: blur(1px);
+        padding: 44px 18px;
+        margin-bottom: 15px;
+        transition: opacity 0.5s ease;
+    }
+
+    .slaider-active {
+        opacity: 1;
+        position: relative;
+    }
+    
+    .step::before {
+        content: url(../img/step-decor-mobil.svg);
+        top: -30px;
+        left: 270px;
+    }
+    
+    .step-number p {
+        font-size: 47px;
+        width: 73px;
+        height: 73px;
+    }
+    
+    .step-description {
+        text-align: center;
+        margin-top: 22px;
+    }
+
+    .step-one::after, .step-two::after, .step-three::after, .step-four::after, .step-five::after {
+        display: none;
+    }
+
+    .slaider-button {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .slaider-button p {
+        margin: 0px 9px;
+    }
+}
